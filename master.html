@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Master Client</title>
+    <style>
+      /* Global styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 50%;
+        margin: 50px auto;
+      }
+      /* Header styles */
+      h1 {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      /* Form styles */
+      div {
+        margin: 10px 0;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      select {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        margin-top: 5px;
+      }
+
+      select:focus,
+      input[type="text"]:focus {
+        outline: none;
+        border: 1px solid #0077cc;
+      }
+
+      button {
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #0077cc;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #0059a6;
+      }
+
+      /* Response container styles */
+      #response-container {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 20px;
+        min-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Master Client</h1>
+    <div class="container">
+      <div>
+        <label for="minion-select">Select a minion client:</label>
+        <select id="minion-select">
+          <option value="ALL">ALL</option>
+        </select>
+      </div>
+      <div>
+        <label for="request-input">Request message:</label>
+        <input type="text" id="request-input" />
+        <button id="send-btn">Send</button>
+      </div>
+      <div id="response-container"></div>
+    </div>
+    <script src="./master.js"></script>
+  </body>
+</html>
